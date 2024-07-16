@@ -1,0 +1,30 @@
+@use '../../styles/variables' as *;
+
+.navbar {
+  width: 100%;
+  height: 56px;
+  background-color: $light-black;
+
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__logo {
+    padding: 1px 10px;
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: $gold-yellow;
+    text-decoration: none;
+    border-radius: 5px;
+
+    &:visited{
+      color: $black;
+    }
+  }
+}
