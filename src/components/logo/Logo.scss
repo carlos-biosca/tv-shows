@@ -1,0 +1,14 @@
+@use '../../styles/variables' as *;
+
+.logo {
+  padding: 1px 10px;
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: $gold-yellow;
+  text-decoration: none;
+  border-radius: 5px;
+
+  &:visited {
+    color: $black;
+  }
+}

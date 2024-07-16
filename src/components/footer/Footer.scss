@@ -1,0 +1,37 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+@use 'sass:color';
+
+.footer{
+  width: 100%;
+  height: 100px;
+  margin-top: 20px;
+  background-color: $light-black;
+
+  &__container {
+    @include center-between;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  &__links{
+    display: flex;
+    gap: 20px;
+  }
+
+  &__link{
+    @include center-center;
+    width: 42px;
+    height: 40px;
+    padding-top: 4px;
+    background-color: $white;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover{
+      background-color: color.scale($white, $lightness: -30%);
+    }
+  }
+}

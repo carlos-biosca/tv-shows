@@ -1,12 +1,13 @@
 import './Navbar.scss'
 
 import Search from '../search/Search';
+import Logo from '../logo/Logo';
 
 const Navbar = () => {
   return ( 
     <div className="navbar">
       <div className='navbar__container'>
-        <a href='/' className='navbar__logo'>TMDb</a>
+        <Logo />
         <Search />
         <div></div>
       </div>
