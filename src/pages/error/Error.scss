@@ -1,0 +1,27 @@
+.error {
+  display: grid;
+  place-items: center;
+  margin: 100px 20px 0;
+  text-align: center;
+
+  &__title,
+  &__subtitle,
+  &__status {
+      margin-bottom: 0px;
+  }
+
+  &__title{
+    font-size: 5rem;
+  }
+
+  &__subtitle,
+  &__message {
+    font-size:  1.5rem;
+  }
+
+  &__status {
+    margin-top: 20px;
+    font-size: 4rem;
+    font-weight: 500;
+  }
+}
