@@ -6,7 +6,7 @@
   width: 100%;
   height: 100px;
   margin-top: 20px;
-  background-color: $light-black;
+  background-color: $black;
 
   &__container {
     @include flex-center(space-between, center);

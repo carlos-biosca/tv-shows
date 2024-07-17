@@ -1,0 +1,9 @@
+@use '../../styles/variables' as *;
+
+.wrapper{
+  max-width: 1280px;
+  min-height: calc(100vh - 56px);
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+}
