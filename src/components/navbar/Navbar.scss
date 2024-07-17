@@ -7,7 +7,7 @@
   background-color: $light-black;
 
   &__container{
-    @include center-between;
+    @include flex-center(space-between, center);
     margin: 0 auto;
     max-width: 1280px;
     width: 100%;

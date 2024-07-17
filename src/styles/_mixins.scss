@@ -1,11 +1,6 @@
-@mixin center-between {
+@mixin flex-center($justify, $align) {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: $justify;
+  align-items: $align;
 }
 
-@mixin center-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
