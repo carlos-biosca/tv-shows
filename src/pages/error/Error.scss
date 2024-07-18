@@ -1,3 +1,5 @@
+@use '../../styles/variables' as *;
+
 .error {
   display: grid;
   place-items: center;
@@ -22,6 +24,6 @@
   &__status {
     margin-top: 20px;
     font-size: 4rem;
-    font-weight: 500;
+    font-weight: $medium;
   }
 }

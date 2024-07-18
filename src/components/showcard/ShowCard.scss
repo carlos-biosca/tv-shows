@@ -5,6 +5,12 @@
   padding-top: 20px;
   border-bottom: 1px solid color.scale($grey, $lightness: -10%);
 
+  &:hover {
+    border-width: 3px;
+    border-color: $gold-yellow;
+    cursor: pointer;
+  }
+
   &__info {
     display: flex;
     gap: 20px
@@ -22,12 +28,16 @@
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: $bold;
+
+    &:hover {
+      color: $dark-grey;
+    }
   }
 
   &__year span,
   &__country span {
-    font-weight: 500;
+    font-weight: $medium;
     margin-right: 3px;
   }
 
