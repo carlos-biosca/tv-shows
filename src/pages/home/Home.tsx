@@ -10,7 +10,7 @@ const Home = (): ReactElement => {
 
   return (
     <div className="home">
-      <div className="wrapper">
+      <div className="home__wrapper">
         <h3>TMDb Charts</h3>
         <h1>Most Popular TV Shows</h1>
         <div>

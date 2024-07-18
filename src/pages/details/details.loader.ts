@@ -8,10 +8,10 @@ interface urlParams {
 
 export async function loader({ params }: urlParams) {
   try {
-    const url = `https://api.themoviedb.org/3/tv/${params.showId}?api_key=${apiKey}`
+    const url = `https://api.themoviedb.org/3/tv/${params.showId}?api_key=${apiKey}&append_to_response=credits`
     const response = await fetch(url);
     const data = await response.json();
-    return data as ShowDetails
+    return data as ShowDetails 
   } catch(err){
     console.log(err);
     return null

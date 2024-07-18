@@ -20,7 +20,7 @@ export interface Show {
 export interface ShowDetails {
   adult: boolean;
   backdrop_path: string;
-  created_by: string[]; 
+  created_by: Creators[]; 
   episode_run_time: number[]; 
   first_air_date: string;
   genres: Genre[];
@@ -55,6 +55,10 @@ export interface ShowDetails {
 interface Genre {
   id: number;
   name: string;
+}
+
+interface Creators {
+  name: string
 }
 
 interface Episode {

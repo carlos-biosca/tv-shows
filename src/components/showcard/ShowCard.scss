@@ -5,6 +5,8 @@
   display: block;
   padding-top: 20px;
   border-bottom: 1px solid color.scale($grey, $lightness: -10%);
+  text-decoration: none;
+  color: inherit;
 
   &:hover {
     border-width: 3px;

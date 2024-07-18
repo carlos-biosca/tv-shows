@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import './ShowCard.scss'
 import { TiStarFullOutline } from "react-icons/ti";
+import { baseUrl, smallSize } from "../../constants";
 
 interface ShowCardProps {
   info: Show
@@ -14,7 +15,7 @@ const ShowCard = ({ info }: ShowCardProps): ReactElement => {
   return ( 
     <Link to={`/details/${id}`} className="showcard">
       <div className="showcard__info">
-        <img src={`https://image.tmdb.org/t/p/w92${poster_path}`} alt="poster" />
+        <img src={`${baseUrl}${smallSize}${poster_path}`} alt="poster" />
         <div className="showcard__text">
             <p className="showcard__title">{name}</p>
             <p className="showcard__year"><span>Year:</span> {first_air_date.slice(0,4)}</p>

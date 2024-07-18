@@ -6,6 +6,15 @@
   padding-bottom: 30px;
   background-color: $black;
 
+  &__wrapper {
+      max-width: 1280px;
+      min-height: calc(100vh - 56px);
+      margin: 0 auto;
+      padding: 20px;
+      background-color: $white;
+      border-radius: 2px;
+    }
+
   &__filters {
     margin-bottom: 20px;
   }
@@ -21,14 +30,6 @@
   }
 }
 
-.wrapper {
-  max-width: 1280px;
-  min-height: calc(100vh - 56px);
-  margin: 0 auto;
-  padding: 20px;
-  background-color: $white;
-  border-radius: 2px;
-}
 
 
 

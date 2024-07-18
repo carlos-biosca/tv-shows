@@ -17,11 +17,3 @@ p {
   margin-bottom: 0;
 }
 
-a {
-  text-decoration: none;
-
-  &:visited,
-  &:active {
-    color: inherit;
-  }
-}
