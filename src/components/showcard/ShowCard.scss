@@ -2,6 +2,7 @@
 @use 'sass:color';
 
 .showcard {
+  display: block;
   padding-top: 20px;
   border-bottom: 1px solid color.scale($grey, $lightness: -10%);
 
@@ -9,6 +10,10 @@
     border-width: 3px;
     border-color: $gold-yellow;
     cursor: pointer;
+  }
+
+  &:visited {
+    color: inherit;
   }
 
   &__info {
@@ -32,6 +37,10 @@
 
     &:hover {
       color: $dark-grey;
+    }
+
+    &:visited {
+      color: $black;
     }
   }
 

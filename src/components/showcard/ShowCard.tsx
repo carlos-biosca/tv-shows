@@ -1,7 +1,9 @@
 import { ReactElement } from "react";
+import { Show } from "../../vite-env";
+import { Link } from "react-router-dom";
+
 import './ShowCard.scss'
 import { TiStarFullOutline } from "react-icons/ti";
-import { Show } from "../../vite-env";
 
 interface ShowCardProps {
   info: Show
@@ -10,7 +12,7 @@ interface ShowCardProps {
 const ShowCard = ({ info }: ShowCardProps): ReactElement => {
   const {poster_path, name, first_air_date, vote_average, vote_count, overview , origin_country} = info
   return ( 
-    <div className="showcard">
+    <Link to={'/details'} className="showcard">
       <div className="showcard__info">
         <img src={`https://image.tmdb.org/t/p/w92${poster_path}`} alt="poster" />
         <div className="showcard__text">
@@ -25,7 +27,7 @@ const ShowCard = ({ info }: ShowCardProps): ReactElement => {
         </div>
       </div>
       <p className="showcard__overview">{overview}</p>
-    </div> );
+    </Link> );
 }
 
 export default ShowCard;

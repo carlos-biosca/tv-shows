@@ -8,8 +8,11 @@
 
   &__title,
   &__subtitle,
-  &__status {
-      margin-bottom: 0px;
+  &__status,
+  &__message,
+  &__link {
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   &__title{
@@ -22,7 +25,6 @@
   }
 
   &__status {
-    margin-top: 20px;
     font-size: 4rem;
     font-weight: $medium;
   }

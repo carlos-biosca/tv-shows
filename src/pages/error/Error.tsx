@@ -28,7 +28,7 @@ const ErrorPage = (): ReactElement => {
       <p className="error__subtitle">Sorry, an unexpected error has occurred.</p>
       <p className="error__status">{error.status}</p>
       <p className="error__message">{error.error?.message}</p>
-      <Link to={'/'}>Go back to home page</Link>
+      <Link to='/' className="error__link">Go back to home page</Link>
     </div>
   );
 }
