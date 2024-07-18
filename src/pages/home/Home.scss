@@ -1,9 +1,36 @@
 @use '../../styles/variables' as *;
+@use 'sass:color';
 
-.wrapper{
+.home {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: $black;
+
+  &__filters {
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    padding: 15px;
+    border: 1px solid color.scale($grey, $lightness: -10%);
+    border-radius: 5px;
+
+    & li:last-child div {
+      border-bottom: none;
+    }
+  }
+}
+
+.wrapper {
   max-width: 1280px;
   min-height: calc(100vh - 56px);
   margin: 0 auto;
   padding: 20px;
-  background-color: white;
+  background-color: $white;
+  border-radius: 2px;
 }
+
+
+
+
+

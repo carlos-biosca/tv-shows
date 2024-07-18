@@ -1,0 +1,59 @@
+@use '../../styles/variables' as *;
+@use 'sass:color';
+
+.showcard {
+  padding-top: 20px;
+  border-bottom: 1px solid color.scale($grey, $lightness: -10%);
+
+  &__info {
+    display: flex;
+    gap: 20px
+  }
+
+  &__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  &__title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  &__year span,
+  &__country span {
+    font-weight: 500;
+    margin-right: 3px;
+  }
+
+  &__rate {
+    display: flex;
+    align-items: center;
+  }
+
+  &__average,
+  &__reviews{
+    padding-top: 2px;
+  }
+
+  &__average {
+    margin-left: 3px;
+  }
+
+  &__reviews {
+    margin-left: 7px;
+    color: color.scale($white, $lightness: -30%);
+  }
+
+  &__overview{
+    max-width: 90%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 1.2rem;
+  }
+}
