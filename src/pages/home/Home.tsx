@@ -1,25 +1,9 @@
 import { ReactElement } from "react";
 import { useLoaderData } from "react-router-dom";
 import './Home.scss'
-
+import { Show } from "../../vite-env";
 import ShowCard from "../../components/showcard/ShowCard";
 
-interface Show {
-  adult: boolean,
-  backdrop_path: string,
-  genre_ids: number[],
-  id: number,
-  origin_country: string[],
-  original_language: string,
-  original_name: string,
-  overview: string,
-  popularity: number,
-  poster_path: string,
-  first_air_date: string,
-  name: string,
-  vote_average: number,
-  vote_count: number
-}
 
 const Home = (): ReactElement => {
   const results = useLoaderData() as Show[]; 
