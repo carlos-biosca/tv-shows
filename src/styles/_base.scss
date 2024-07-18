@@ -19,4 +19,9 @@ p {
 
 a {
   text-decoration: none;
+
+  &:visited,
+  &:active {
+    color: inherit;
+  }
 }

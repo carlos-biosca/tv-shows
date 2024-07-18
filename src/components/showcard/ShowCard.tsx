@@ -10,9 +10,9 @@ interface ShowCardProps {
 }
 
 const ShowCard = ({ info }: ShowCardProps): ReactElement => {
-  const {poster_path, name, first_air_date, vote_average, vote_count, overview , origin_country} = info
+  const {poster_path, name, first_air_date, vote_average, vote_count, overview , origin_country, id} = info
   return ( 
-    <Link to={'/details'} className="showcard">
+    <Link to={`/details/${id}`} className="showcard">
       <div className="showcard__info">
         <img src={`https://image.tmdb.org/t/p/w92${poster_path}`} alt="poster" />
         <div className="showcard__text">
