@@ -21,6 +21,7 @@ export interface ShowDetails {
   adult: boolean;
   backdrop_path: string;
   created_by: Creators[]; 
+  credits: Credits;
   episode_run_time: number[]; 
   first_air_date: string;
   genres: Genre[];
@@ -111,4 +112,37 @@ interface Season {
   poster_path: string;
   season_number: number;
   vote_average: number;
+}
+
+export interface Cast {
+  adult: boolean;
+  gender: number;
+  id: number;
+  known_for_department: string;
+  name: string;
+  original_name: string;
+  popularity: number;
+  profile_path: string | null;
+  character?: string;
+  credit_id: string;
+  order?: number;
+}
+
+interface Crew {
+  adult: boolean;
+  gender: number;
+  id: number;
+  known_for_department: string;
+  name: string;
+  original_name: string;
+  popularity: number | null;
+  profile_path: string | null;
+  department: string;
+  job: string;
+  credit_id: string;
+}
+
+interface Credits {
+  cast: Cast[];
+  crew: Crew[];
 }

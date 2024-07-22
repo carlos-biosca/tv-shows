@@ -44,5 +44,34 @@
     font-size: 1.2rem;
     font-weight: $bold;
   }
+
+  &__cast {
+    padding: 10px 80px 30px;
+    background-color: $white;
+  }
+
+  &__top-title {
+    font-size: 2rem;
+    font-weight: $bold;
+    text-decoration: underline;
+    text-decoration-color: $gold-yellow;
+  }
+
+  &__slide {
+    display: flex;
+    gap: 30px;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+
+      &-thumb {
+        background-color: $dark-grey;
+        border: 6px solid transparent;
+        border-radius: 10px;
+        background-clip: padding-box;
+      }
+    }
+  }
 }
 

@@ -1,20 +1,21 @@
 import { ReactElement, useMemo } from "react";
 import { useLoaderData } from "react-router-dom";
-import { ShowDetails } from "../../vite-env";
+import { ShowDetails, Cast } from "../../vite-env";
 import './Details.scss'
 import { TiStarFullOutline } from "react-icons/ti";
 import { baseUrl, largeSize } from "../../constants";
 import arrayToString from "../../utils/arrayToString";
+import CastCard from "../../components/castcard/CastCard";
 
 const Details = (): ReactElement => {
   const details = useLoaderData() as ShowDetails; 
-  const {vote_average, overview, poster_path, name, first_air_date, genres, created_by, number_of_episodes, number_of_seasons, origin_country} = details
+  const {vote_average, overview, poster_path, name, first_air_date, genres, created_by, number_of_episodes, number_of_seasons, origin_country, credits} = details
   const joinedGenres = useMemo<string>(() => arrayToString(genres, ','),[genres])
   const joinedCreators = useMemo<string>(() => arrayToString(created_by, ' -'),[created_by])
 
   return (
     <div className="details">
-      <div className="details__wrapper">
+      <section className="details__wrapper">
         <img src={`${baseUrl}${largeSize}${poster_path}`} alt="poster" />
         <div className="details__block">
           <h1 className="details__title">{name}
@@ -36,7 +37,17 @@ const Details = (): ReactElement => {
             </>
           )}
         </div>
-      </div>
+      </section>
+      <section className="details__cast">
+        <h2 className="details__top-title">Top Cast</h2>
+        <div className="details__slide">
+          { credits ? (
+            credits.cast.map((item: Cast) => {
+              return <CastCard info={item} />
+            })
+          ): null}
+        </div>
+      </section>
     </div>
   );
 }
