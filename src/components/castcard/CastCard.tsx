@@ -9,9 +9,9 @@ interface CastCardProps {
 }
 
 const CastCard = ({ info }: CastCardProps):ReactElement =>  {
-  const {id, character, name, profile_path} = info
+  const {character, name, profile_path} = info
   return (
-    <div className="cast__card" key={id}>
+    <div className="cast__card">
       {profile_path ? 
         <img src={`${baseUrl}${mediumSize}${profile_path}`} alt="cast image" /> : 
         (

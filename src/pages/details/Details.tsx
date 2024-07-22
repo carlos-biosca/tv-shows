@@ -45,7 +45,7 @@ const Details = (): ReactElement => {
             <div className="details__slide">
               {
                 credits.cast.map((item: Cast) => {
-                  return <CastCard info={item} />
+                  return <CastCard info={item} key={item.id}/>
                 })
               }
             </div>

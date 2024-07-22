@@ -3,8 +3,10 @@
 
 .cast {
     &__card {
-      min-width: 185px;
-      height: 400px;
+      flex: 1 0 185px;
+      max-width: 185px;
+      height: 420px;
+      margin-bottom: 10px;
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
