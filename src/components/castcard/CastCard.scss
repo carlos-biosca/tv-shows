@@ -1,4 +1,5 @@
 @use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 
 .cast {
     &__card {
@@ -13,6 +14,12 @@
       padding-left: 10px;
       padding-right: 10px;
       padding-bottom: 15px;
+    }
+
+    &__empty {
+      height: 278px;
+      @include flex-center(center, center);
+      background-color: $dark-grey;
     }
 
     &__name {

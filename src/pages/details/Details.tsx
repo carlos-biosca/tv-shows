@@ -12,6 +12,7 @@ const Details = (): ReactElement => {
   const {vote_average, overview, poster_path, name, first_air_date, genres, created_by, number_of_episodes, number_of_seasons, origin_country, credits} = details
   const joinedGenres = useMemo<string>(() => arrayToString(genres, ','),[genres])
   const joinedCreators = useMemo<string>(() => arrayToString(created_by, ' -'),[created_by])
+  console.log(details);
 
   return (
     <div className="details">
@@ -40,13 +41,15 @@ const Details = (): ReactElement => {
       </section>
       <section className="details__cast">
         <h2 className="details__top-title">Top Cast</h2>
-        <div className="details__slide">
-          { credits ? (
-            credits.cast.map((item: Cast) => {
-              return <CastCard info={item} />
-            })
-          ): null}
-        </div>
+          { credits && credits.cast.length > 0 ? (
+            <div className="details__slide">
+              {
+                credits.cast.map((item: Cast) => {
+                  return <CastCard info={item} />
+                })
+              }
+            </div>
+          ): <p className="details__empty">Not available cast data</p>}
       </section>
     </div>
   );
