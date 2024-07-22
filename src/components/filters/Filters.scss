@@ -1,0 +1,17 @@
+@use '../../styles/variables' as *;
+
+.filters{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  &__option {
+    cursor: pointer;
+    font-weight: $medium;
+
+    &--selected {
+        color: $selected-blue;
+        text-decoration: underline;
+      }
+  }
+}

@@ -146,3 +146,8 @@ interface Credits {
   cast: Cast[];
   crew: Crew[];
 }
+
+export type ReducerAction = {
+  type: REDUCER_ACTION_TYPE
+  payload: Show[] 
+}
