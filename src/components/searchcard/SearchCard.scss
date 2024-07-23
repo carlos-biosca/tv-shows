@@ -9,6 +9,14 @@
   background-color: $dark-black;
   color: $white;
   border-bottom: 1px solid color.scale($white, $lightness: -30%);
+  text-decoration: none;
+
+  &__image,
+  &__text,
+  &__title,
+  &__year{
+    pointer-events: none;
+  }
 
   &__image {
     max-width: 60px;
