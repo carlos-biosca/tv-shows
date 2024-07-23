@@ -2,10 +2,9 @@
 @use '../../styles/mixins' as *;
 @use 'sass:color';
 
-.footer{
+.footer {
   width: 100%;
   height: 130px;
-  padding-bottom: 30px;
   background-color: $black;
 
   &__container {
@@ -14,6 +13,15 @@
     max-width: 1280px;
     width: 100%;
     height: 100%;
+  }
+
+  &__text {
+    font-size: 1.3rem;
+    color: $white;
+
+    & a:visited{
+      color: inherit
+    }
   }
   
   &__links{

@@ -72,7 +72,7 @@ const Search = (): ReactElement => {
           <ul className='search__list'>
             {
               results.map(show => 
-                <li key={show.id}>
+                <li key={show.id} className='search__item'>
                   <SearchCard info={show} close={handleClose} key={show.id}/>
                 </li>
               )

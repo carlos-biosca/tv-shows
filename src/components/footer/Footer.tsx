@@ -1,5 +1,4 @@
 import { ReactElement } from 'react';
-import Logo from '../logo/Logo';
 import { ImFacebook } from "react-icons/im";
 import { SiInstagram } from "react-icons/si";
 import { FaTwitter, FaYoutube } from "react-icons/fa";
@@ -9,7 +8,7 @@ const Footer = (): ReactElement => {
   return ( 
     <div className='footer'>
       <div className='footer__container'>
-        <Logo />
+        <p className='footer__text'>©2024 by <a href="https://www.linkedin.com/in/carlos-biosca/" target='_blank'>Carlos</a></p>
         <ul className='footer__links'>
           <li className='footer__link'>
             <a href='https://www.facebook.com/' target='_blank'><ImFacebook color='black' size={20}/></a>

@@ -5,11 +5,14 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  padding: 5px;
-  background-color: $dark-black;
+  padding: 12px 10px;
   color: $white;
   border-bottom: 1px solid color.scale($white, $lightness: -30%);
   text-decoration: none;
+
+  &:hover {
+    background-color: $dark-grey;
+  }
 
   &__image,
   &__text,
