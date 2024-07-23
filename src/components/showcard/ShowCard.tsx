@@ -1,7 +1,6 @@
 import { ReactElement } from "react";
 import { Show } from "../../vite-env";
 import { Link } from "react-router-dom";
-
 import './ShowCard.scss'
 import { TiStarFullOutline } from "react-icons/ti";
 import { baseUrl, smallSize } from "../../constants";
