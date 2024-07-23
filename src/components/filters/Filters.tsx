@@ -1,44 +1,53 @@
-import { ReactElement } from "react";
+import { Dispatch, ReactElement } from "react";
+import { Show, ReducerAction } from "../../vite-env";
+import { REDUCER_ACTION_TYPE }from "../../reducers/FiltersReducer";
+import { TbSTurnUp } from "react-icons/tb";
 import './Filters.scss'
-import { Show } from "../../vite-env";
 
 interface FiltersProps {
   state: {
     shows: Show[],
     filter: string
   }
-  popularity: (shows: Show[]) => void,
-  rating: (shows: Show[]) => void
-  alphabet: (shows: Show[]) => void,
-  year: (shows: Show[]) => void
+  dispatch: Dispatch<ReducerAction>
 } 
 
-const Filters = ({state, popularity, rating, alphabet, year}: FiltersProps):ReactElement => {
+const Filters = ({state, dispatch}: FiltersProps): ReactElement => {
+  const filterByPopularity = (shows: Show[]) => dispatch({type: REDUCER_ACTION_TYPE.POPULARITY, payload: shows})
+  const filterByRating = (shows: Show[]) => dispatch({type: REDUCER_ACTION_TYPE.RATING, payload: shows})
+  const filterByAlphabet = (shows: Show[]) => dispatch({type: REDUCER_ACTION_TYPE.ALPHABETICAL, payload: shows})
+  const filterByYear = (shows: Show[]) => dispatch({type: REDUCER_ACTION_TYPE.YEAR, payload: shows})
+  const reverse = (shows: Show[]) => dispatch({type: REDUCER_ACTION_TYPE.REVERSE, payload: shows})
 
   return ( 
-    <div>
-      <ul className="filters">
+    <div className="filters">
+      <ul className="filters__list">
         <span>Sort by:</span>
         <li 
-          onClick={() => popularity(state.shows)} 
+          onClick={() => filterByPopularity(state.shows)} 
           className={`filters__option ${state.filter === "popularity" ? "filters__option--selected" : ""}`} >
             Popularity
         </li>
         <li 
-          onClick={() => rating(state.shows)}
+          onClick={() => filterByRating(state.shows)}
           className={`filters__option ${state.filter === "rating" ? "filters__option--selected" : ""}`} >
           Rating
         </li>
         <li 
-          onClick={() => alphabet(state.shows)}
+          onClick={() => filterByAlphabet(state.shows)}
           className={`filters__option ${state.filter === "alphabetical" ? "filters__option--selected" : ""}`} >     Alphabetical
         </li>
         <li 
-          onClick={() => year(state.shows)}
+          onClick={() => filterByYear(state.shows)}
           className={`filters__option ${state.filter === "year" ? "filters__option--selected" : ""}`} >
           Year
         </li>
       </ul>
+      <button 
+        onClick={() => reverse(state.shows)}
+        className="filters__reverse">
+          <TbSTurnUp size={15}/>
+        </button>
     </div>
   );
 }

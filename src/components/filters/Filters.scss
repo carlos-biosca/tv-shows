@@ -1,9 +1,15 @@
 @use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 
 .filters{
-  display: flex;
-  gap: 10px;
+  @include flex-center(space-between,center);
   margin-bottom: 20px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 
   &__option {
     cursor: pointer;
@@ -13,5 +19,10 @@
         color: $selected-blue;
         text-decoration: underline;
       }
+  }
+
+  &__reverse {
+    padding: 3px 5px 0px;
+    cursor: pointer;
   }
 }
