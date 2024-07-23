@@ -1,0 +1,25 @@
+@use '../../styles/variables' as *;
+@use 'sass:color';
+
+.searchcard {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 5px;
+  background-color: $dark-black;
+  color: $white;
+  border-bottom: 1px solid color.scale($white, $lightness: -30%);
+
+  &__image {
+    max-width: 60px;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+
+  &__year {
+    color: color.scale($white, $lightness: -30%);
+  }
+}

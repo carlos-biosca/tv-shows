@@ -31,7 +31,7 @@
     cursor: pointer;
 
     &:hover{
-      background-color: color.scale($white, $lightness: -30%);
+      background-color: $light-grey;
     }
   }
 }

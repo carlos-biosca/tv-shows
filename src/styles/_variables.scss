@@ -1,8 +1,12 @@
+@use 'sass:color';
+
 //colors
 $white: #ffffff;
 $black: #000000;
+$dark-black: #1f1f1f;
 $light-black: #121212;
 $dark-grey: #0000008a;
+$light-grey: color.scale($white, $lightness: -30%);;
 $grey: #eeeeee;
 $gold-yellow: #f2c53a;
 $selected-blue: #0497ff;
