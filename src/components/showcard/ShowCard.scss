@@ -1,4 +1,5 @@
 @use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 @use 'sass:color';
 
 .showcard {
@@ -7,6 +8,7 @@
   border-bottom: 1px solid color.scale($grey, $lightness: -10%);
   text-decoration: none;
   color: inherit;
+  @include color-transition(border);
 
   &:hover {
     border-width: 3px;
@@ -35,6 +37,7 @@
 
     &:hover {
       color: $dark-grey;
+      @include color-transition(color);
     }
 
     &:visited {

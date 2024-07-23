@@ -4,3 +4,7 @@
   align-items: $align;
 }
 
+@mixin color-transition($property) {
+  transition: $property ease-in 0.15s;
+}
+
